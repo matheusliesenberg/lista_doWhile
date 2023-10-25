@@ -7,8 +7,15 @@
 
     //Entrada
 
+    let senhacorreta = 6666;
+    let senhainformada = Number(prompt("Informe a senha: "));
 
     //Processamento
+    while (senhainformada !== senhacorreta) {
+        alert("Senha Incorreta");
+        senhainformada = Number(prompt("Informe a senha: "));
+    }
+    alert("Senha Correta");
 
 
     //Saída

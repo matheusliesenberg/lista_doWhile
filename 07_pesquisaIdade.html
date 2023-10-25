@@ -13,11 +13,46 @@
     */
 
     //Entrada
-
+    let idade = 0;
+    let sexo = "";
+    let salario = 0;
+    let menorSalario =0;
+    let menorIdade =0;
+    let maiorIdade = 0;
+    let mulheres = 0;
+    let totalPessoas = 0;
 
     //Processamento
 
+    while (idade >= 0) {
+        idade = parseInt(prompt("Digite a idade:"));
+        sexo = prompt("Digite o sexo (M/F):");
+        salario = parseInt(prompt("Digite o salário:"));
+
+        totalSalario += salario;
+        totalPessoas++;
+
+        if (idade < menorIdade) {
+            menorIdade = idade;
+        }
+        if (idade > maiorIdade) {
+            maiorIdade = idade;
+        }
+
+        if (sexo === "F") {
+            mulheres++;
+        }
+
+        if (salario < menorSalario) {
+            menorSalario = salario;
+        }
+    }
 
     //Saída
+    alert("A média dos salários é de R$", totalSalario / totalPessoas);
+    alert("A maior idade é de", maiorIdade);
+    alert("A menor idade é de", menorIdade);
+    alert("A quantidade de mulheres é de", mulheres);
+    alert("A pessoa com o menor salário é do sexo", sexo, "e tem", menorIdade, "anos");
 
 </script>

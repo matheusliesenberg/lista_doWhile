@@ -12,6 +12,54 @@
 
     //Entrada
 
+    let nm = "";
+    let idade = 0;
+    let salario = 0;
+    let sx = "";
+    let estadocivil = ""; aler
+
+    while (true) {
+
+
+        nm = prompt("Digite seu nm: ");
+        idade = parseInt(prompt("Digite sua idade: "));
+        salario = parseFloat(prompt("Digite seu salário: "));
+        sx = prompt("Digite seu sx (f ou m): ");
+        estadocivil = prompt("Digite seu estado civil (s, c, v ou d): ");
+
+        if (nm.length < 4) {
+            alert("O nm deve ter mais de 3 caracteres.");
+
+        }
+
+        if (idade < 0 || idade > 150) {
+            alert("A idade deve estar entre 0 e 150 anos.");
+
+        }
+
+        if (salario <= 0) {
+            alert("O salário deve ser maior que zero.");
+
+        }
+
+        if (sx != "f" && sx != "m") {
+            alert("O sx deve ser 'f' ou 'm'.");
+
+        }
+
+        if (estadocivil != "s" && estadocivil != "c" && estadocivil != "v" && estadocivil != "d") {
+            alert("O estado civil deve ser 's', 'c', 'v' ou 'd'.");
+
+        }
+
+        alert("Nome: " + nm);
+        alert("Idade: " + idade);
+        alert("Salário: " + salario);
+        alert("Sexo: " + sx);
+        alert("Estado Civil: " + estadocivil);
+
+
+    }
 
     //Processamento
 
